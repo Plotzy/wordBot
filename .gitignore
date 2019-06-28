@@ -1,0 +1,13 @@
+# system/hidden files
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db
+.idea
+node_modules
+*/npm-debug.log
+.revision
+/.idea

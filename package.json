@@ -1,0 +1,19 @@
+{
+  "name": "@plotzy/wordbot",
+  "version": "1.0.0",
+  "description": "The best shit in the word.",
+  "main": "index.js",
+  "repository": "git@github.com:Plotzy/wordBot.git",
+  "author": "Jon Plotz",
+  "license": "UNLICENCED",
+  "theme_path": "/",
+  "scripts": {
+    "dist": "lipemat-js-boilerplate dist",
+    "start": "lipemat-js-boilerplate start",
+    "lint": "lipemat-js-boilerplate lint",
+    "test": "lipemat-js-boilerplate test"
+  },
+  "dependencies": {
+    "@lipemat/js-boilerplate": "^3.0.1"
+  }
+}
