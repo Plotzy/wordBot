@@ -1,6 +1,7 @@
 import {map} from 'static';
 import once from 'lodash/once';
-
+import Pluralize from 'pluralize';
+import {getPastTense} from './past-tense';
 
 export const Fill = async () => {
 	let lib = await madLib();
@@ -9,9 +10,18 @@ export const Fill = async () => {
 
 	for( let i = 0; i < lib.value.length - 2; i++ ) {
 		let these = await fills[ lib.blanks[i] ];
+		if ( "verb ending in 'ing'" === lib.blanks[i] ) {
+			these[0] = these[0] + 'ing';
+		}
+		if ( "plural noun" === lib.blanks[i] ) {
+			these[0] = Pluralize( these[0] );
+		}
+		if ( "past tense verb" === lib.blanks[i] ) {
+			these[0] = getPastTense( these[0] );
+		}
 		out += lib.value[i] + these.shift();
 	}
-	return out;
+	return {title : lib.title, content : out};
 };
 
 
@@ -73,7 +83,6 @@ export const wordBot = async ( params ) => {
 
 
 const Request = async ( url, data ) => {
-	console.info( data );
 	return await $.ajax( {
 		dataType: 'json',
 		url: url,

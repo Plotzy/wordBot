@@ -8,14 +8,11 @@ const UI = () => {
 	const { data, error, isLoading } = useAsync( Fill );
 	return (
 		<div>
-			<h1> Yes I am kidding you!</h1>
+			<h1>{!isLoading && data.title}</h1>
 			{isLoading &&
 			<img alt="I suck" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif"/>}
-			<p>
-				<pre>
-					{data}
-				</pre>
-			</p>
+
+			<pre>{!isLoading && data.content}</pre>
 		</div>
 	);
 };
