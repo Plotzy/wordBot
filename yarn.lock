@@ -6682,7 +6682,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@^15.5.6, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@>=15.5.7, prop-types@^15.5.6, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -6859,6 +6859,13 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+react-async@^6.2.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/react-async/-/react-async-6.2.2.tgz#164f4cce3cbea97f0169f640a792f273a4b547b9"
+  integrity sha512-yK9nFDFgQedbKkizGV3nHHr/EZCOyQCStjJAPaQx/tpoCAeNlsCIFS5rVO0ag64XMC1bNW7XNp3n1bZw7XYrJw==
+  optionalDependencies:
+    prop-types ">=15.5.7"
 
 react-document-title@^2.0.3:
   version "2.0.3"

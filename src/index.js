@@ -1,18 +1,21 @@
-import Request from 'api';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import {Fill} from './api';
+import {useAsync} from 'react-async';
 
 
 const UI = () => {
-	const [data, setData] = useState( {} );
-	useEffect( () => Request( {}, ( r ) => {
-		setData( r );
-	} ) );
-
+	const { data, error, isLoading } = useAsync( Fill );
 	return (
 		<div>
 			<h1> Yes I am kidding you!</h1>
-			{JSON.stringify( data )}
+			{isLoading &&
+			<img alt="I suck" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif"/>}
+			<p>
+				<pre>
+					{data}
+				</pre>
+			</p>
 		</div>
 	);
 };
