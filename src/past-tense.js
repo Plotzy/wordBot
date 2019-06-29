@@ -12,6 +12,7 @@ let exceptions = {
 
 // grammatically predictable rules
 export function getPastTense( verb ) {
+	return verb;
 	if ( exceptions[verb] ) {
 		return exceptions[verb];
 	}
