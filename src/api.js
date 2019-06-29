@@ -58,7 +58,7 @@ const getFills = async () => {
 };
 
 export const madLib = once( async () => {
-	return await Request( 'http://madlibz.herokuapp.com/api/random', {} );
+	return await Request( 'http://madlibz.herokuapp.com/api/random?minlength=5&maxlength=50', {} );
 
 } );
 
